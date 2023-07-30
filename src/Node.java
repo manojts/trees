@@ -100,4 +100,19 @@ public class Node
 			return (1 + Integer.max(h1, h2));
 			
 		}
+		
+		public int treeDiameter(Node root)
+		{
+			if(root == null)
+				return 0;
+			int h1 = treeHeight(root.left);
+			int h2 = treeHeight(root.right);
+			
+			int dLeft = treeDiameter(root.left);
+			int dRight = treeDiameter(root.right);
+			
+			return (Integer.max(h1+h2, Integer.max(dLeft, dRight)));
+			
+		}
+
 	}

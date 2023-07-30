@@ -14,6 +14,9 @@ public class BinaryTree {
 		root.LevelOrder(root);
 		System.out.println();
 		System.out.println("Height of Tree is "+ root.treeHeight(root));
+		System.out.println("Diameter of Tree is "+ root.treeDiameter(root));
+
+
 		
 
 	}
